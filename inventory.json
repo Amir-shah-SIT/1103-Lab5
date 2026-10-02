@@ -1,2 +1,20 @@
-{"P001": {"productID": "P001", "productName": "Monitor", "productPrice": 399.0, "productStock": 10},
-"P002": {"productID": "P002", "productName": "Mouse", "productPrice": 40.0, "productStock": 30}}
+{
+    "P001": {
+        "productID": "P001",
+        "productName": "Monitor",
+        "productPrice": 399.0,
+        "productStock": 10
+    },
+    "P002": {
+        "productID": "P002",
+        "productName": "Mouse",
+        "productPrice": 40.0,
+        "productStock": 30
+    },
+    "P004": {
+        "productID": "P003",
+        "productName": "HDMI cable",
+        "productPrice": 15.0,
+        "productStock": 200
+    }
+}

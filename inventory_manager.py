@@ -76,7 +76,7 @@ def mainMenuBanner():
     print("=========================================\n")
         
 def mainMenuOptions():
-    print("------------------------")
+    print("\n------------------------")
     print("1. Display All Products")
     print("2. Add Products")
     print("3. Update Stock")
@@ -106,6 +106,10 @@ def load_inventory():
             json.dump(inventory, file, indent=4)
             return {}
 
+def save_inventory():
+    with open("inventory.json", "w", encoding="utf-8") as file:
+        json.dump(inventory, file, indent=4, sort_keys=True)
+    print("Inventory save successfully.\n")
 mainMenuBanner()
 inventory = load_inventory()
 while True:
@@ -127,9 +131,12 @@ while True:
             search_product()
         #save inventory
         case 5:
-            break
+            print("saving now...")
+            save_inventory()
         #quit
         case 6:
+            print("Saving inventory before exiting...")
+            save_inventory()
             print("Thank you for using Inventory Management System.")
             print("Program Terminated.")
             break
