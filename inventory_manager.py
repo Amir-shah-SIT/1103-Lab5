@@ -22,7 +22,6 @@ def add_product():
         "productPrice" : productPriceinput,
         "productStock" : productStockinput
     }
-    print(inventory)
     inventory[productIDinput] = newProduct
 
     return
