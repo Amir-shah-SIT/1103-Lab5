@@ -11,10 +11,10 @@
         "productPrice": 40.0,
         "productStock": 30
     },
-    "P004": {
+    "P003": {
         "productID": "P003",
-        "productName": "HDMI cable",
-        "productPrice": 15.0,
-        "productStock": 200
+        "productName": "keyboard",
+        "productPrice": 99.99,
+        "productStock": 20
     }
 }

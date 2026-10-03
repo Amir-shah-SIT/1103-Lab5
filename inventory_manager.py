@@ -22,31 +22,25 @@ def add_product():
         "productPrice" : productPriceinput,
         "productStock" : productStockinput
     }
+    print(inventory)
     inventory[productIDinput] = newProduct
 
     return
 
 def update_stock():
-    while True:
         updateStockinput = input("Enter Product ID: ").upper()
         if updateStockinput in inventory:
             print("Product Found.")
             print("Name: " + inventory[updateStockinput]["productName"])
             print("Current Stock: "+ str(inventory[updateStockinput]["productStock"]))
-            while True:
-                try:
-                    newstockInput = int(input("New Stock Quantity: "))
-                    inventory[updateStockinput]["productStock"] = newstockInput
-                    return 
-                except ValueError:
-                    print("Please enter an integer.")
+            try:
+                newstockInput = int(input("New Stock Quantity: "))
+                inventory[updateStockinput]["productStock"] = newstockInput
+                return 
+            except ValueError:
+                print("Please enter an integer.")
         else:
             print("Product not found.")
-
-
-
-
-    return
 
 def search_product():
     print("Search Product")
